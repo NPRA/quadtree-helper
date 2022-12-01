@@ -3,17 +3,7 @@ var map = L.map('map', {
     tapTolerance: 15
 });
 
-//enable sending tiles in the url
-$(document).ready(function() {
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
-	if (urlParams.has('quadtree')) {
-		const qt = urlParams.get('quadtree');
-		document.getElementById('buttons').style.visibility='hidden';
-		document.getElementById('txt-enter').style.visibility='hidden';
-		enterTiles(qt);
-	}
-});
+
 // create the tile layer with correct attribution
 // var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 // var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
@@ -71,6 +61,16 @@ $(document).ready(function() {
 	{
 		alert("Wrong input format. The format is tiles separated by a comma, with no spaces and no comma at the end. </br>Example: 0102013,00123122,12212")
 	}
+  }
+  
+  //enable sending tiles in the url
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  if (urlParams.has('quadtree')) {
+	const qt = urlParams.get('quadtree');
+	document.getElementById('buttons').style.visibility='hidden';
+	document.getElementById('txt-enter').style.visibility='hidden';
+	enterTiles(qt);
   }
   
   $("#map").keydown(function (e)  
