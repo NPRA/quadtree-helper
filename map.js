@@ -13,7 +13,7 @@ $(document).ready(function() {
 		document.getElementById('txt-enter').style.visibility='hidden';
 		enterTiles(qt);
 	}
-}
+});
 // create the tile layer with correct attribution
 // var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 // var osmAttrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
