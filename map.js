@@ -17,7 +17,7 @@ L.tileLayer('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png',{//'https://stame
 L.control.geocoder('search-fljxAAA').addTo(map);
 
 // start the map in South-East England
-map.setView( new L.LatLng( 51.5072, 0.1275 ), 0 );
+map.setView( new L.LatLng( 51.5072, 0.1275 ), 4 );
 
 $(document).ready(function() {
   $('#buttons button').on('click', function(event) {
